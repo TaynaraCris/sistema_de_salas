@@ -1,5 +1,7 @@
 package sistema_de_salas;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Universidade {
@@ -9,6 +11,7 @@ public class Universidade {
 	private boolean possuiCentroOlimpico;
 	private boolean possuiBiblioteca;
 	private String nome;
+	private List <Predio> predios = new ArrayList<>();
 
 	public boolean getPossuiCentroOlimpico() {
 		return this.possuiCentroOlimpico;
@@ -49,13 +52,15 @@ public class Universidade {
 		String temEstacionamento = scan.next();
 		boolean possuiEstacionamento = false;
 		
-		if(temEstacionamento == "sim") {
+		if(temEstacionamento.equalsIgnoreCase("sim")) {
 			possuiEstacionamento = true;
-		}else if(temEstacionamento == "nao") {
+		}else if(temEstacionamento.equalsIgnoreCase("nao")) {
 			possuiEstacionamento = false;
 		}
 		
 		predio.setPossuiEstacionamento(possuiEstacionamento);
+		
+		predios.add(predio);
 	}
 
 }
