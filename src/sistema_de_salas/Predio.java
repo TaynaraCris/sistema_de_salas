@@ -1,6 +1,6 @@
 package sistema_de_salas;
 
-public class Predios {
+public class Predio {
 
 	private int numDeSalas;
 	private boolean possuiEstacionamento;
@@ -35,8 +35,8 @@ public class Predios {
 		this.nome = nome;
 	}
 
-/*	public double getTaxaOcupacao() {
+	/*public double getTaxaOcupacao() {
 		
-	}
-*/
+	}*/
+
 }
