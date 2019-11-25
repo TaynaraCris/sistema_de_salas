@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import exception.CampoBrancoException;
+import exception.CampoPreenchidoIncorretamenteException;
+
 public class Universidade {
 	
 	Scanner scan = new Scanner(System.in);
@@ -37,7 +40,7 @@ public class Universidade {
 		this.nome = nome;
 	}
 
-	public void cadastrarPredio() {
+	public void cadastrarPredio() throws CampoPreenchidoIncorretamenteException {
 		Predio predio = new Predio();
 		
 		System.out.println("Informe o nome do prédio ");
@@ -56,6 +59,8 @@ public class Universidade {
 			possuiEstacionamento = true;
 		}else if(temEstacionamento.equalsIgnoreCase("nao")) {
 			possuiEstacionamento = false;
+		}else {
+			throw new CampoPreenchidoIncorretamenteException("O campo deve ser preenchido com 'sim' ou 'nao'");
 		}
 		
 		predio.setPossuiEstacionamento(possuiEstacionamento);
