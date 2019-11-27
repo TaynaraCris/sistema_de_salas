@@ -15,6 +15,7 @@ public class Universidade {
 	private boolean possuiBiblioteca;
 	private String nome;
 	private List <Predio> predios = new ArrayList<>();
+	private List<Professor> professores = new ArrayList<>();
 
 	public boolean getPossuiCentroOlimpico() {
 		return this.possuiCentroOlimpico;
@@ -66,6 +67,27 @@ public class Universidade {
 		predio.setPossuiEstacionamento(possuiEstacionamento);
 		
 		predios.add(predio);
+	}
+	
+	public void criarProfessor() {
+		Professor professor = new Professor();
+		
+		System.out.println("Informe o nome do professor ");
+		String nome = scan.next();
+		professor.setNome(nome);
+		
+		System.out.println("Informe a matrícula do professor ");
+		String matricula = scan.next();
+		professor.setMatricula(matricula);
+		
+		professores.add(professor);
+	}
+	
+	public void cadastrarPeriodo() {
+		/*Periodo periodo = new Periodo();
+		
+		System.out.println("Informe o início do período ");*/
+		
 	}
 
 }
