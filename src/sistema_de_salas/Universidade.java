@@ -86,7 +86,7 @@ public class Universidade {
 		System.out.println("Informe a matrícula do professor ");
 		String matricula = scan.next();
 		professor.setMatricula(matricula);
-		
+
 		professores.add(professor);
 	}
 

@@ -9,7 +9,7 @@ public class Main {
 		Universidade universidade = new Universidade();
 
 		universidade.cadastrarPredio();
-		//temEstacionamento
+		universidade.criarProfessor();
 		
 		//try (unb.cadastrarPredio()) {
 		    // success
