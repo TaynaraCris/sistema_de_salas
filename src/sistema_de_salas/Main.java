@@ -6,13 +6,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Universidade unb = new Universidade();
+		Universidade universidade = new Universidade();
+
+		universidade.cadastrarPredio();
+		//temEstacionamento
 		
-		try (unb.cadastrarPredio()) {
+		//try (unb.cadastrarPredio()) {
 		    // success
-		} catch (CampoPreenchidoIncorretamenteException exc) {
-		    System.out.println(exc);
-		}
+		//} catch (CampoPreenchidoIncorretamenteException exc) {
+	//	    System.out.println(exc);
+	//	}
 
 	}
 
