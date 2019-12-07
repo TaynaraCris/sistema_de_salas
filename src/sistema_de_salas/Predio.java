@@ -12,34 +12,52 @@ public class Predio {
 //	private double taxaOcupacao;
 	
 	public void cadastrarSala() {
-	/*	- eLaboratorio: boolean
-		- possuiArCondicionado: boolean
-		- possuiProjetor: boolean
+	/*	- possuiProjetor: boolean
 		- possuiTelevisao: boolean
 		- gradeHoraria: ArrayList<Aula>
 		- taxaOcupacao: double*/
 
 		Sala sala = new Sala();
-		
+
 		System.out.println("Informe o nome da sala ");
 		String nome = scan.next();
 		sala.setNome(nome);
-		
+
 		System.out.println("Informe a quantidade de lugares da sala ");
 		int qtdLugares = scan.nextInt();
 		sala.setQtdLugares(qtdLugares);
-/*
-		System.out.println("O prédio possui estacionamento? (sim ou nao)");
-		String temEstacionamento = scan.next();
-		boolean possuiEstacionamento = false;
+
+		String possuiLaboratorio;
+		boolean eLaboratorio = false;
 		
-		if(temEstacionamento.equalsIgnoreCase("sim")) {
-			possuiEstacionamento = true;
-		}else if(temEstacionamento.equalsIgnoreCase("nao")) {
-			possuiEstacionamento = false;
-		}*/
+		do{
+			System.out.println("A sala é de laboratório? (sim ou nao)");
+			possuiLaboratorio = scan.next();
+			
+			if(possuiLaboratorio.equalsIgnoreCase("sim")) {
+				eLaboratorio = true;
+			}else if(possuiLaboratorio.equalsIgnoreCase("nao")) {
+				eLaboratorio = false;
+			}
+		
+		}while(!possuiLaboratorio.equalsIgnoreCase("sim") && !possuiLaboratorio.equalsIgnoreCase("nao"));
 
+		String temArCondicionado;
+		boolean possuiArCondicionado = false;
+		
+		do{
+			System.out.println("A sala possui ar condicionado? (sim ou nao)");
+			temArCondicionado = scan.next();
+			
+			if(temArCondicionado.equalsIgnoreCase("sim")) {
+				possuiArCondicionado = true;
+			}else if(temArCondicionado.equalsIgnoreCase("nao")) {
+				possuiArCondicionado = false;
+			}
+		
+		}while(!temArCondicionado.equalsIgnoreCase("sim") && !temArCondicionado.equalsIgnoreCase("nao"));
 
+		
 	}
 
 	public void removerSala() {}
