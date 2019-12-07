@@ -11,6 +11,10 @@ public class Main {
 		universidade.cadastrarPredio();
 		universidade.criarProfessor();
 		
+		Predio predio = new Predio();
+
+		predio.cadastrarSala();
+		
 		//try (unb.cadastrarPredio()) {
 		    // success
 		//} catch (CampoPreenchidoIncorretamenteException exc) {

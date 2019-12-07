@@ -1,22 +1,23 @@
 package sistema_de_salas;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Predio {
 	
 	Scanner scan = new Scanner(System.in);
-
-	private int numDeSalas;
+	private List <Predio> predios = new ArrayList<>();
+	private List <Sala> salas = new ArrayList<>();
 	private boolean possuiEstacionamento;
 	private String nome;
 //	private double taxaOcupacao;
 	
 	public void cadastrarSala() {
-	/*	- possuiProjetor: boolean
-		- possuiTelevisao: boolean
-		- gradeHoraria: ArrayList<Aula>
-		- taxaOcupacao: double*/
-
+	/*
+- gradeHoraria: ArrayList<Aula>
+- taxaOcupacao: double
+*/
 		Sala sala = new Sala();
 
 		System.out.println("Informe o nome da sala ");
@@ -57,18 +58,49 @@ public class Predio {
 		
 		}while(!temArCondicionado.equalsIgnoreCase("sim") && !temArCondicionado.equalsIgnoreCase("nao"));
 
+		String temProjetor;
+		boolean possuiProjetor = false;
 		
+		do{
+			System.out.println("A sala possui projetor? (sim ou nao)");
+			temProjetor = scan.next();
+			
+			if(temProjetor.equalsIgnoreCase("sim")) {
+				possuiProjetor = true;
+			}else if(temProjetor.equalsIgnoreCase("nao")) {
+				possuiProjetor = false;
+			}
+		
+		}while(!temProjetor.equalsIgnoreCase("sim") && !temProjetor.equalsIgnoreCase("nao"));
+		
+		String temTelevisao;
+		boolean possuiTelevisao = false;
+		
+		do{
+			System.out.println("A sala possui televisão? (sim ou nao)");
+			temTelevisao = scan.next();
+			
+			if(temTelevisao.equalsIgnoreCase("sim")) {
+				possuiTelevisao = true;
+			}else if(temTelevisao.equalsIgnoreCase("nao")) {
+				possuiTelevisao = false;
+			}
+		
+		}while(!temTelevisao.equalsIgnoreCase("sim") && !temTelevisao.equalsIgnoreCase("nao"));
+
+		//predio.setPossuiEstacionamento(possuiEstacionamento);
+
+		sala.setNome(nome);
+		sala.setELaboratorio(eLaboratorio);
+		sala.setPossuiArCondiciondado(possuiArCondicionado);
+		sala.setPossuiProjetor(possuiProjetor);
+		sala.setPossuiTelevisao(possuiTelevisao);
+		sala.setQtdLugares(qtdLugares);
+
+		salas.add(sala);
 	}
 
 	public void removerSala() {}
-
-	public int getNumDeSalas() {
-		return this.numDeSalas;
-	}
-
-	public void setNumDeSalas(int numDeSalas) {
-		this.numDeSalas = numDeSalas;
-	}
 
 	public boolean getPossuiEstacionamento() {
 		return this.possuiEstacionamento;

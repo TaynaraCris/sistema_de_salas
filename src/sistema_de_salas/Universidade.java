@@ -47,10 +47,6 @@ public class Universidade {
 		System.out.println("Informe o nome do prédio ");
 		String nome = scan.next();
 		predio.setNome(nome);
-		
-		System.out.println("Informe o número de salas ");
-		int numDeSalas = scan.nextInt();
-		predio.setNumDeSalas(numDeSalas);
 
 		String temEstacionamento;
 		boolean possuiEstacionamento = false;
