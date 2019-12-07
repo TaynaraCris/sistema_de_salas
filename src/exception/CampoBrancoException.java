@@ -6,7 +6,6 @@ public class CampoBrancoException extends Exception{
 
 	public CampoBrancoException(String mensagemDeErro) {
 		
-		super(mensagemDeErro);	
+		super(mensagemDeErro);
 	}
-
 }

@@ -41,7 +41,7 @@ public class Universidade {
 		this.nome = nome;
 	}
 
-	public void cadastrarPredio() throws CampoPreenchidoIncorretamenteException {
+	public void cadastrarPredio() /*throws CampoPreenchidoIncorretamenteException*/ {
 		Predio predio = new Predio();
 		
 		System.out.println("Informe o nome do prédio ");
@@ -52,23 +52,30 @@ public class Universidade {
 		int numDeSalas = scan.nextInt();
 		predio.setNumDeSalas(numDeSalas);
 
-		System.out.println("O prédio possui estacionamento? (sim ou nao)");
-		String temEstacionamento = scan.next();
+		String temEstacionamento;
 		boolean possuiEstacionamento = false;
 		
-		if(temEstacionamento.equalsIgnoreCase("sim")) {
-			possuiEstacionamento = true;
-		}else if(temEstacionamento.equalsIgnoreCase("nao")) {
-			possuiEstacionamento = false;
-		}else {
-			throw new CampoPreenchidoIncorretamenteException("O campo deve ser preenchido com 'sim' ou 'nao'");
-		}
+		do{
+			System.out.println("O prédio possui estacionamento? (sim ou nao)");
+			temEstacionamento = scan.next();
+			
+			if(temEstacionamento.equalsIgnoreCase("sim")) {
+				possuiEstacionamento = true;
+			}else if(temEstacionamento.equalsIgnoreCase("nao")) {
+				possuiEstacionamento = false;
+			}//else {
+				//throw new CampoPreenchidoIncorretamenteException("O campo deve ser preenchido com 'sim' ou 'nao'");
+			//}
 		
+		}while(!temEstacionamento.equalsIgnoreCase("sim") && !temEstacionamento.equalsIgnoreCase("nao"));
+
 		predio.setPossuiEstacionamento(possuiEstacionamento);
 		
 		predios.add(predio);
 	}
-	
+
+	public void removerPredio(Predio predio) {}
+
 	public void criarProfessor() {
 		Professor professor = new Professor();
 		
@@ -82,12 +89,16 @@ public class Universidade {
 		
 		professores.add(professor);
 	}
-	
+
+	public void removerProfesor(Professor professor) {}	
+
 	public void cadastrarPeriodo() {
 		/*Periodo periodo = new Periodo();
 		
 		System.out.println("Informe o início do período ");*/
 		
 	}
+
+	public void removerPeriodo(Periodo periodo) {}
 
 }
