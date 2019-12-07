@@ -66,7 +66,12 @@ public class Sala {
 
 //	public void setTaxaOcupacao(double taxaOcupacao) {}
 
-//	public void adicionarAula(Aula) {}
+	public void adicionarAula(Aula aula) {
+
+		
+
+
+	}
 
 //	public void removerAula(Aula) {}
 
