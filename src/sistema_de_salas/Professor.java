@@ -20,5 +20,4 @@ public class Professor {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-
 }
