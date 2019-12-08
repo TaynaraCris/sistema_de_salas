@@ -97,4 +97,7 @@ public class Universidade {
 
 	public void removerPeriodo(Periodo periodo) {}
 
+	public List<Professor> getProfessores (){
+		return this.professores;
+	}
 }
