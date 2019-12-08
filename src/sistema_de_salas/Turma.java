@@ -11,6 +11,7 @@ public class Turma {
 	private String nome;
 	private List<Professor> professores = new ArrayList<>();
 	private int numeroDeVagas;
+	private List<Aluno> alunos = new ArrayList<>();
 
 	public String getNome() {
 		return this.nome;
@@ -20,9 +21,13 @@ public class Turma {
 		this.nome = nome;
 	}
 
-//	public void getProfessores() {}
+	public List<Professor> getProfessores() {
+		return this.professores;
+	}
 
-//	public setProfessor(Professor) {}
+	public void setProfessores(Professor professor) {
+		professores.add(professor);
+	}
 
 	public int getNumeroDeVagas() {
 		return this.numeroDeVagas;
@@ -50,4 +55,18 @@ public class Turma {
 	}
 
 	public void removerAula() {}
+
+	public void cadastrarAluno() {
+		Aluno aluno = new Aluno();
+		
+		System.out.println("Informe o nome do aluno: ");
+		String nome = scan.next();
+		aluno.setNome(nome);
+
+		System.out.println("Informe a matrícula do aluno: ");
+		String matricula = scan.next();
+		aluno.setMatricula(matricula);
+		
+		alunos.add(aluno);
+	}
 }
