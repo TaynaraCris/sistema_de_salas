@@ -2,8 +2,11 @@ package sistema_de_salas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Sala {
+
+	Scanner scan = new Scanner(System.in);
 
 	private int qtdLugares;
 	private boolean eLaboratorio;
@@ -67,9 +70,16 @@ public class Sala {
 //	public void setTaxaOcupacao(double taxaOcupacao) {}
 
 	public void adicionarAula(Aula aula) {
-
 		
+		System.out.println("Informe o nome da aula: ");
+		String nome = scan.next();
+		aula.setNome(nome);
 
+		System.out.println("Informe o dia da aula: ");
+		String dia = scan.next();
+		aula.setDia(dia);
+
+		//- periodo: Periodo
 
 	}
 
