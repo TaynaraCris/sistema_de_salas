@@ -16,6 +16,7 @@ public class Universidade {
 	private String nome;
 	private List <Predio> predios = new ArrayList<>();
 	private List<Professor> professores = new ArrayList<>();
+	private List<Disciplina> disciplinas = new ArrayList<>();
 
 	public boolean getPossuiCentroOlimpico() {
 		return this.possuiCentroOlimpico;
@@ -100,4 +101,29 @@ public class Universidade {
 	public List<Professor> getProfessores (){
 		return this.professores;
 	}
+
+	public void cadastrarDisciplina() {
+
+		Disciplina disciplina = new Disciplina();
+
+		System.out.println("Informe o nome da disciplina: ");
+		String nome = scan.next();
+		disciplina.setNome(nome);
+
+		System.out.println("Informe o número de créditos da disciplina: ");
+		int creditos = scan.nextInt();
+		disciplina.setCreditos(creditos);
+
+		System.out.println("Informe o número de turmas da disciplina: ");
+		int numDeTurmas = scan.nextInt();
+		disciplina.setNumDeTurmas(numDeTurmas);
+
+		System.out.println("Informe o código da disciplina: ");
+		String codigoDisciplina = scan.next();
+		disciplina.setCodigoDisciplina(codigoDisciplina);
+
+		disciplinas.add(disciplina);
+	}
+
+	public void removerDisciplina() {}
 }

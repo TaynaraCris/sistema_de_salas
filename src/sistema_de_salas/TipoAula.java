@@ -2,31 +2,37 @@ package sistema_de_salas;
 
 public class TipoAula {
 
-	private String graduacao;
-	private String posGraduacao;
-	private String extensao;
+	private boolean graduacao;
+	private boolean posGraduacao;
+	private boolean extensao;
 
-	public String getGraducao() {
+  public TipoAula(boolean graduacao, boolean posGraduacao, boolean extensao) {
+    this.graduacao = graduacao;
+    this.posGraduacao = posGraduacao;
+    this.extensao = extensao;
+  }
+
+	public boolean getGraducao() {
 		return this.graduacao;
 	}
 
-	public void setGraduacao(String graduacao) {
+	public void setGraduacao(boolean graduacao) {
 		this.graduacao = graduacao;
 	}
 
-	public String getPosGraduacao() {
+	public boolean getPosGraduacao() {
 		return this.posGraduacao;
 	}
 
-	public void setPosGraduacao(String posGraduacao) {
+	public void setPosGraduacao(boolean posGraduacao) {
 		this.posGraduacao = posGraduacao;
 	}
 
-	public String getExtensao() {
+	public boolean getExtensao() {
 		return this.extensao;
 	}
 
-	public void setExtensao(String extensao) {
+	public void setExtensao(boolean extensao) {
 		this.extensao = extensao;
 	}
 
