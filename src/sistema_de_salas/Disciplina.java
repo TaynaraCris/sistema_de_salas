@@ -1,15 +1,18 @@
 package sistema_de_salas;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Disciplina {
+
+	Scanner scan = new Scanner(System.in);
 
 	private String nome;
 	private int creditos;
 	private int numDeTurmas;
 	private String codigoDisciplina;
-
-	public void cadastrarTurma() {}
-
-	public void removerTurma() {}
+	private List <Turma> turmas = new ArrayList<>();
 
 	public String getNome() {
 		return this.nome;
@@ -42,5 +45,26 @@ public class Disciplina {
 	public void setCodigoDisciplina(String codigoDisciplina) {
 		this.codigoDisciplina = codigoDisciplina;
 	}
+
+	public void cadastrarTurma() {
+
+		Turma turma = new Turma();
+
+		System.out.println("Informe o nome da turma: ");
+		String nome = scan.next();
+		turma.setNome(nome);
+
+		System.out.println("Informe o número de vagas: ");
+		int numeroDeVagas = scan.nextInt();
+		turma.setNumeroDeVagas(numeroDeVagas);
+		
+		//- professores: ArrayList<Professor>
+		//-alunos: ArrayList<Aluno>
+
+
+	}
+
+	public void removerTurma() {}
+
 
 }
