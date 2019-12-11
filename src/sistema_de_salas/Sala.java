@@ -80,7 +80,6 @@ public class Sala {
 		aula.setDia(dia);
 
 		//- periodo: Periodo
-
 	}
 
 //	public void removerAula(Aula) {}

@@ -67,9 +67,10 @@ public class Universidade {
 		}while(!temEstacionamento.equalsIgnoreCase("sim") && !temEstacionamento.equalsIgnoreCase("nao"));
 
 		predio.setPossuiEstacionamento(possuiEstacionamento);
-		
+
 		predios.add(predio);
-	}
+
+		}
 
 	public void removerPredio(Predio predio) {}
 
