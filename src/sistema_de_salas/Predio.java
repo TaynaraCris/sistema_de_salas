@@ -12,6 +12,27 @@ public class Predio {
 	private boolean possuiEstacionamento;
 	private String nome;
 //	private double taxaOcupacao;
+
+	public boolean getPossuiEstacionamento() {
+		return this.possuiEstacionamento;
+	}
+
+	public void setPossuiEstacionamento(boolean possuiEstacionamento) {
+		this.possuiEstacionamento = possuiEstacionamento;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/*public double getTaxaOcupacao() {
+		
+	}*/
+	
 	
 	public void cadastrarSala() {
 	/*
@@ -19,6 +40,13 @@ public class Predio {
 - taxaOcupacao: double
 */
 		Sala sala = new Sala();
+		
+		System.out.println("Em qual prédio deseja cadastrar a sala?");
+	
+		for(int i = 0; i <predios.size(); i++) {
+
+			System.out.println(predios.get(i));	
+		}
 
 		System.out.println("Informe o nome da sala ");
 		String nome = scan.next();
@@ -102,24 +130,6 @@ public class Predio {
 
 	public void removerSala() {}
 
-	public boolean getPossuiEstacionamento() {
-		return this.possuiEstacionamento;
-	}
 
-	public void setPossuiEstacionamento(boolean possuiEstacionamento) {
-		this.possuiEstacionamento = possuiEstacionamento;
-	}
-
-	public String getNome() {
-		return this.nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	/*public double getTaxaOcupacao() {
-		
-	}*/
 
 }
