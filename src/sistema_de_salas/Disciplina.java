@@ -60,7 +60,7 @@ public class Disciplina {
 		
 		//- professores: ArrayList<Professor>
 		//-alunos: ArrayList<Aluno>
-
+		turmas.add(turma);
 
 	}
 
